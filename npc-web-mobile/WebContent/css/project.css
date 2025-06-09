@@ -1,0 +1,36 @@
+
+.online {
+	background-color: #66CC00;
+}
+
+.offline {
+	background-color: red;
+}
+
+.errors {
+	background-color:#FFCCCC;
+	border:1px solid #CC0000;
+	width:400px;
+	margin-bottom:8px;
+	font-size: large;
+	color: #000000;
+}
+.errors li { 
+	list-style: none; 
+}
+
+.ui-dialog { 
+    background-color: transparent;
+    background-image: none;
+}
+
+.ui-dialog-contain { 
+    max-width: 800px;
+}
+ 	
+ 	/*This is the div within which the signature canvas is fitted*/
+ 	#signatureInformant {
+ 		border: 2px dotted black;
+ 		background-color:#FFCCCC;
+	}
+	

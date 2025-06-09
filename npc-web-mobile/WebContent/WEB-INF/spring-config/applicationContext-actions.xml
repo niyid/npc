@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean id="agentAction" class="com.vasworks.npc.struts.AgentAction">
+		<property name="agentService" ref="agentService" />
+	</bean>
+	
+	<bean id="countryStateSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.CountryStateSelectionAction" parent="agentAction" />
+	
+	<bean id="occupationSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.OccupationSelectionAction" parent="agentAction" />
+	
+	<bean id="fatherSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.FatherSelectionAction" parent="agentAction" />
+		
+	<bean id="motherSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.MotherSelectionAction" parent="agentAction" />
+		
+	<bean id="informantSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.InformantSelectionAction" parent="agentAction" />
+		
+	<bean id="addressSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.AddressSelectionAction" parent="agentAction" />
+		
+	<bean id="educationLevelSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.EducationLevelSelectionAction" parent="agentAction" />
+			
+	<bean id="ethnicitySelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.EthnicitySelectionAction" parent="agentAction" />
+			
+	<bean id="lgaSelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.LgaSelectionAction" parent="agentAction" />
+			
+	<bean id="countrySelectionAction" scope="prototype" class="com.vasworks.npc.struts.json.CountrySelectionAction" parent="agentAction" />
+								
+	<bean id="loginRedirectAction" scope="prototype" class="com.vasworks.npc.struts.DashboardAction" parent="agentAction" />
+
+	<bean id="birthCertAction" scope="prototype" class="com.vasworks.npc.struts.agent.BirthCertAction" parent="agentAction" />
+	
+	<bean id="birthAttnAction" scope="prototype" class="com.vasworks.npc.struts.agent.BirthAttnAction" parent="agentAction" />
+
+	<bean id="deathCertAction" scope="prototype" class="com.vasworks.npc.struts.agent.DeathCertAction" parent="agentAction" />
+	
+	<bean id="fatherAction" scope="prototype" class="com.vasworks.npc.struts.agent.FatherAction" parent="agentAction" />
+	
+	<bean id="motherAction" scope="prototype" class="com.vasworks.npc.struts.agent.MotherAction" parent="agentAction" />
+	
+	<bean id="informantAction" scope="prototype" class="com.vasworks.npc.struts.agent.InformantAction" parent="agentAction" />
+	
+	<bean id="imageDisplayAction" scope="prototype" class="com.vasworks.npc.struts.agent.ImageDisplayAction" parent="agentAction" />
+	
+	<bean id="addressAction" scope="prototype" class="com.vasworks.npc.struts.agent.AddressAction" parent="agentAction" />
+							
+</beans>

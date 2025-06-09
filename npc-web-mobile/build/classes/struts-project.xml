@@ -1,0 +1,238 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>	
+	
+	<package name="download" namespace="/download" extends="default">
+	    					
+		<action name="imageDisplay" class="imageDisplayAction">
+			<result name="success" type="stream">
+				<param name="contentType">contentType</param> 
+				<param name="inputName">inputStream</param> 
+				<param name="contentDisposition">contentDisposition</param> 
+				<param name="bufferSize">1024</param>
+			</result> 
+		</action>	
+		
+	</package>
+		
+	<package name="agent/ajax" namespace="/agent/ajax" extends="default">
+	    	    
+	    <action name="deathCertRecord" class="deathCertAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/deathCertRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/deathCertRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/deathCertRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+	    </action>	    
+	    <action name="deathCertList" class="deathCertAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+	    </action>
+	    <action name="deathCertSearch" class="deathCertAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/deathCertList.jsp</result>
+	    </action>
+	    	    	    
+	    <action name="birthCertRecord" class="birthCertAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/birthCertRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/birthCertRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/birthCertRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+	    </action>	    
+	    <action name="birthCertList" class="birthCertAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+	    </action>
+	    <action name="birthCertSearch" class="birthCertAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/birthCertList.jsp</result>
+	    </action>
+	    	    	    
+	    <action name="birthAttnRecord" class="birthAttnAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/birthAttnRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/birthAttnRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/birthAttnRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+	    </action>	    
+	    <action name="birthAttnList" class="birthAttnAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+	    </action>
+	    <action name="birthAttnSearch" class="birthAttnAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/birthAttnList.jsp</result>
+	    </action>
+	    	    	    	    	    
+	    <action name="fatherRecord" class="fatherAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/fatherRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/fatherRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/fatherRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+	    </action>	    
+	    <action name="fatherList" class="fatherAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+	    </action>
+	    <action name="fatherSearch" class="fatherAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/fatherList.jsp</result>
+	    </action>
+	    		    	    
+	    <action name="motherRecord" class="motherAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/motherRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/motherRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/motherRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+	    </action>	    
+	    <action name="motherList" class="motherAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+	    </action>
+	    <action name="motherSearch" class="motherAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/motherList.jsp</result>
+	    </action>
+	    	    	    
+	    <action name="informantRecord" class="informantAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/informantRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/informantRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/informantRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+	    </action>	    
+	    <action name="informantList" class="informantAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+	    </action>  
+	    <action name="informantSearch" class="informantAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/informantList.jsp</result>
+	    </action>  
+	    <action name="informantDetails" class="informantAction" method="select">
+			<result name="input">/WEB-INF/jsp/agent/ajax/informantDetails.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/informantDetails.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/informantDetails.jsp</result>
+	    </action>  
+	    	    	    	    	    
+	    <action name="addressRecord" class="addressAction">
+			<result name="input">/WEB-INF/jsp/agent/ajax/addressRecord.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/addressRecord.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/addressRecord.jsp</result>
+			<result name="list">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+	    </action>	    
+	    <action name="addressList" class="addressAction" method="list">
+			<result name="input">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+	    </action>  
+	    <action name="addressSearch" class="addressAction" method="search">
+			<result name="input">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+			<result name="success">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+			<result name="error">/WEB-INF/jsp/agent/ajax/addressList.jsp</result>
+	    </action>  
+	    	        	    	    	    	    
+    </package>
+    
+    <package name="json" namespace="/json" extends="swapper, json-default">
+        
+	    <action name="listStateByCountry" class="countryStateSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>	    	    
+
+	    <action name="listOccupation" class="occupationSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>
+
+	    <action name="listFather" class="fatherSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>
+
+	    <action name="listMother" class="motherSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>
+
+	    <action name="listInformant" class="informantSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>
+
+	    <action name="listAddress" class="addressSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>	    	    	    	    	    	
+
+	    <action name="listEducationLevel" class="educationLevelSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>	    	    	    	    	    	
+	    
+	    <action name="listEthnicity" class="ethnicitySelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>	    	    	    	    	    	
+	    
+	    <action name="listLga" class="lgaSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>	    	    	    	    	    	
+       
+	    <action name="listCountryState" class="countryStateSelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>	    	    
+     
+	    <action name="listCountry" class="countrySelectionAction">
+      		<result name="success" type="stream">
+            	<param name="contentType">application/json</param>
+                <param name="inputName">jsonStream</param>
+                <param name="bufferSize">1024</param>
+            </result>		
+	    </action>		    	    	
+	</package>
+	
+</struts>
